@@ -63,23 +63,379 @@ table {
 
 /* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
 body {
+    min-width: 428px;
     font-family: Habibi, serif;
     background-color: white;
     color: black;
-    font-size: 16px;
-    line-height: normal; /* normal or 16px? */
-    margin: 0;
-    padding: 0;
-    min-width: 428px;
+    font-size: 1rem;
+    line-height: normal;
+    margin: auto;
+
+    p {
+        margin-left: 20px;
+    }
+
+    .thumbnails figure {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .thumbnails img {
+        display: block;
+        height: auto;
+        flex-direction: column;
+        width: auto;
+        height: auto;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .thumbnails figcaption {
+        display: block;
+        font-size: 1rem;
+        background-color: #000000;
+        opacity: 0.6;
+        color: white;
+        position: absolute;
+        flex-direction: column;
+        width: 30%;
+        justify-content: center;
+        text-align: center;
+        padding: 5px;
+    }
+
+    h2 {
+        font-family: Irish Grover, cursive;
+        font-size: 2rem;
+        padding: 10px;
+        margin: auto;
+    }
+
+    h3 {
+        font-family: Irish Grover, cursive;
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 10px;
+        margin: 5px;
+    }
+
+    header, footer {
+        display: block;
+        align-items: center;
+        text-align: center;
+        background-color: #06A816;
+        color: white;
+        margin: auto;
+    }
+    
+    header h1 {
+        font-family: Irish Grover, cursive;
+        font-size: 2.5rem;
+        text-align: center;    
+        text-shadow: 3px 3px black;
+
+    }
+
+    header p {
+        font-style: italic;
+        text-align: center;
+        padding: 5px 10px 20px 10px;
+
+    }
+
+    #hours dl div {
+        display: flex;
+        font-weight: bold;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 5px;
+        margin: auto; 
+    }
+
+    #hours dd {
+        margin-left: 5px;
+    }
+
+    footer small {
+        display: block;
+        background-color: white;
+        color: #06A816;
+        font-weight: bold;
+        text-align: center;
+        padding-top: 1px;
+        padding-bottom: 10px;
+    }
+
+    nav h2 {
+        visibility: hidden;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul {
+        display: block;
+        justify-content: space-between;
+        list-style: none;
+        color: white;
+        text-align: center;
+        margin: 5px 60px 5px 60px;
+    }
+
+    nav a { 
+        display: flex;
+        justify-content: center;
+        background-color: #E75D02;
+        color: white;
+        font-weight: bold;
+        margin: 15px;
+        padding: 5px;
+        text-decoration: none;
+        /* border: 1px solid white; */
+        border-radius: 5px;
+    }
+
+    #top-nav {
+        position: fixed;
+        font-weight: bold;
+        border: white;
+        background-color: #E75D02;
+        text-decoration: none;
+        padding: 0;
+        margin: 10px 10px 10px 10px;
+        bottom: 0;
+        right: 0;
+        z-index: 3;
+        border: 2px solid white;
+        border-radius: 5px;
+    }
 }
 
-h1, h2, h3 {
-    font-family: Irish Grover, cursive;
+/*-------------------- MEDIA QUERY (medium) --------------------------------*/
+ @media screen and (min-width: 834px) {
+    header h1 {
+        display: inline-grid;
+        justify-content: left;
+        margin: 5px;
+    }
+    header p {
+        display: inline-grid;
+        justify-content: right;
+        margin-left: 100px;
+    }
+    nav ul {
+            display: block;
+            columns: 2;
+            column-gap: 50px;
+    }
+    nav li {
+        padding: 10px;
+        margin: auto;
+    }
+    .thumbnails {
+        display: grid;      
+        justify-content: space-between; 
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 0;
+    }
+    .thumbnails img {
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 0;
+    }
+    footer small {
+        display: inline-block;
+        width: 100%;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    #hours h2 {
+        margin: auto;
+        padding: 0;
+    }
+    #contact, #hours {
+        display: inline-grid;
+        justify-content: center;
+        text-align: center;
+        font-size: 1.25rem;
+        margin: 40px;
+    }
+    #top-nav {
+        margin: 10px;
+        padding: 0;
+    }
 }
-h1 {
-    font-size: 2.6rem; /* 40px */
+
+/*-------------------- MEDIA QUERY (large) ------------------------------------*/
+ @media screen and (min-width: 1280px) {
+    header {
+        display: block;
+    }
+    header h1 {
+        display: grid;
+        text-align: left;
+        margin: auto;
+        padding: 10px;
+    }
+    header p {
+        display: grid;
+        text-align: left;
+        justify-content: left;
+        margin: 0;
+    }
+    nav ul {
+            display: block;
+            position: absolute;
+            top: 50px;
+            right: -30px;
+            justify-content: right;
+            columns: 2;
+            column-gap: 30px;
+            margin: 0;
+            line-height: 30%;
+
+    }
+    nav li {
+        display: grid;
+        margin: 0;
+        border-width: thick;
+        background-color: #E75D02;
+        border: 2px solid white;
+        border-radius: 5px;
+        text-align: center;
+        font-size: large;
+        padding: 0px 100px 0px 100px;
+
+    }    
+    .thumbnails {
+        display: grid;      
+        justify-content: space-between; 
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 0;
+    }
+    .thumbnails img {
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 10px;
+        width: auto;
+        margin: 0;
+        margin-bottom:30px;
+    }
+    #contact, #hours {
+    display: inline-flex;
+    columns: 4;
+    column-gap: 100px;
+    padding: 0;
+    font-size: 1.25rem;
+    margin: 30px;
+    text-align: center;
+    align-content: center;
+    }
+    #contact h2 {
+       display: flex;
+       margin-top: 10px;
+    }
+    #hours h2 {
+        display: flex;
+        margin-top: 50px;
+    }
+    #top-nav li {
+        display: flex;
+        margin: auto;
+        position: absolute;
+    }
+    #top-nav a {
+        display: flex;
+        padding: auto;
+        line-height: 40px;
+        font-size: x-large;
+    }
 }
-h2 {
-    font-size: 1.5em; /* 28px */
+/*-------------------- MEDIA QUERY (xl) --------------------------------------*/
+@media screen and (min-width: 1440px) {
+    header {
+        display: block;
+    }
+    header h1 {
+        display: grid;
+        text-align: left;
+        margin: auto;
+        padding: 10px;
+    }
+    header p {
+        display: grid;
+        text-align: left;
+        justify-content: left;
+        margin: 0;
+    }
+    nav ul {
+            display: block;
+            position: absolute;
+            top: 40px;
+            right: -20px;
+            justify-content: right;
+            columns: 2;
+            column-gap: 50px;
+            line-height: 30%;
+
+    }
+    nav li {
+        display: grid;
+        margin: 10;
+        border-width: thick;
+        background-color: #E75D02;
+        border: 2px solid white;
+        border-radius: 5px;
+        text-align: center;
+        font-size: large;
+        padding: 0px 100px 0px 100px;
+
+    }    
+    .thumbnails {
+        display: grid;      
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .thumbnails img {
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: 100%;
+        margin-bottom:30px;
+    }
+    .thumbnails 
+    #contact, #hours {
+    display: inline-flex;
+    columns: 4;
+    column-gap: 100px;
+    padding: 0;
+    font-size: 1.25rem;
+    margin: 30px;
+    text-align: center;
+    align-content: left;
+    }
+    #contact h2 {
+       display: flex;
+       margin-top: 10px;
+       align-items: left;
+    }
+    #hours h2 {
+        display: flex;
+        margin-top: 50px;
+    }
+    #top-nav li {
+        display: flex;
+        margin: auto;
+        position: absolute;
+    }
+    #top-nav a {
+        display: flex;
+        line-height: 40px;
+        font-size: x-large;
+    }
 }
-    
