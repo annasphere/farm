@@ -195,7 +195,6 @@ body {
         margin: 15px;
         padding: 5px;
         text-decoration: none;
-        /* border: 1px solid white; */
         border-radius: 5px;
     }
 
@@ -206,7 +205,7 @@ body {
         background-color: #E75D02;
         text-decoration: none;
         padding: 0;
-        margin: 10px 10px 10px 10px;
+        margin: 10px;
         bottom: 0;
         right: 0;
         z-index: 3;
@@ -264,10 +263,6 @@ body {
         text-align: center;
         font-size: 1.25rem;
         margin: 40px;
-    }
-    #top-nav {
-        margin: 10px;
-        padding: 0;
     }
 }
 
@@ -352,7 +347,6 @@ body {
     }
     #top-nav a {
         display: flex;
-        padding: auto;
         line-height: 40px;
         font-size: x-large;
     }
@@ -375,19 +369,17 @@ body {
         margin: 0;
     }
     nav ul {
-            display: block;
-            position: absolute;
-            top: 40px;
-            right: -20px;
-            justify-content: right;
-            columns: 2;
-            column-gap: 50px;
-            line-height: 30%;
-
+        top: 40px;
+        right: -30px;
+        justify-content: right;
+        columns: 2;
+        column-gap: 30px;
+        margin: 0;
+        line-height: 30%;
     }
     nav li {
         display: grid;
-        margin: 10;
+        margin: 0;
         border-width: thick;
         background-color: #E75D02;
         border: 2px solid white;
@@ -417,20 +409,20 @@ body {
     font-size: 1.25rem;
     margin: 30px;
     text-align: center;
-    align-content: left;
+    /* align-content: left; */
     }
     #contact h2 {
        display: flex;
        margin-top: 10px;
-       align-items: left;
+       /* align-items: left; */
     }
     #hours h2 {
         display: flex;
         margin-top: 50px;
     }
-    #top-nav li {
+     #top-nav li {
         display: flex;
-        margin: auto;
+        margin: 10px;
         position: absolute;
     }
     #top-nav a {
